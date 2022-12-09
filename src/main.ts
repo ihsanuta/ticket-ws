@@ -6,7 +6,7 @@ async function bootstrap() {
     cors: true
   });
   app.enableCors({
-    origin : "*"
+    origin : "http://203.194.114.12:4200"
   });
   await app.listen(3000);
 }
