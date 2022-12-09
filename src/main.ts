@@ -6,7 +6,9 @@ async function bootstrap() {
     cors: true
   });
   app.enableCors({
-    origin : "http://203.194.114.12:4200"
+    allowedHeaders: ['content-type'],
+    origin : 'http://203.194.114.12:4200',
+    credentials: true,
   });
   await app.listen(3000);
 }
