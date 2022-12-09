@@ -11,7 +11,7 @@ import {
   import { Logger } from '@nestjs/common';
   import { Socket, Server } from 'socket.io';
 
-  @WebSocketGateway({namespace: "/ticket-point"})
+  @WebSocketGateway({namespace: "/ticket-point", cors: '*:*'})
   export class TicketPointGateway implements OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect{
     @WebSocketServer() server: Server;
     private logger: Logger = new Logger('AppGateway');
